@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Personalization | Dessert Delight
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            DESSERT DELIGHT
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="desserts.html">
+                Desserts
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+            <a href="order.html">
+                Orders
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main
+        style="
+            max-width:900px;
+            margin:70px auto;
+            padding:0 25px;
+        "
+    >
+
+        <h1
+            style="
+                font-family:'Playfair Display',serif;
+                color:#4A2C20;
+                font-size:42px;
+                margin-bottom:10px;
+            "
+        >
+            Personalization
+        </h1>
+
+
+        <p
+            style="
+                color:#765548;
+                margin-bottom:35px;
+            "
+        >
+            Customize your Dessert Delight experience.
+        </p>
+
+
+        <section
+            style="
+                background:#FFFFFF;
+                padding:35px;
+                border:1px solid #E4D7C8;
+                box-shadow:0 12px 35px rgba(74,44,32,.08);
+            "
+        >
+
+            <!-- LANGUAGE -->
+
+            <div style="margin-bottom:30px;">
+
+                <label
+                    for="language"
+                    style="
+                        display:block;
+                        font-weight:600;
+                        color:#4A2C20;
+                        margin-bottom:9px;
+                    "
+                >
+                    Preferred Language
+                </label>
+
+                <select
+                    id="language"
+                    style="
+                        width:100%;
+                        padding:13px;
+                        border:1px solid #D8C8B8;
+                        background:#F8F1E7;
+                        color:#4A2C20;
+                        font-family:inherit;
+                    "
+                >
+
+                    <option value="English">
+                        English
+                    </option>
+
+                    <option value="Tamil">
+                        தமிழ்
+                    </option>
+
+                    <option value="Hindi">
+                        हिन्दी
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DESSERT PREFERENCE -->
+
+            <div style="margin-bottom:30px;">
+
+                <label
+                    style="
+                        display:block;
+                        font-weight:600;
+                        color:#4A2C20;
+                        margin-bottom:12px;
+                    "
+                >
+                    Favorite Desserts
+                </label>
+
+
+                <div
+                    style="
+                        display:grid;
+                        grid-template-columns:repeat(
+                            auto-fit,
+                            minmax(150px, 1fr)
+                        );
+                        gap:10px;
+                    "
+                >
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="dessert"
+                            value="Cakes"
+                        >
+                        Cakes
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="dessert"
+                            value="Pastries"
+                        >
+                        Pastries
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="dessert"
+                            value="Chocolates"
+                        >
+                        Chocolates
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="dessert"
+                            value="Ice Cream"
+                        >
+                        Ice Cream
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="dessert"
+                            value="Cookies"
+                        >
+                        Cookies
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIETARY -->
+
+            <div style="margin-bottom:30px;">
+
+                <label
+                    for="diet"
+                    style="
+                        display:block;
+                        font-weight:600;
+                        color:#4A2C20;
+                        margin-bottom:9px;
+                    "
+                >
+                    Dietary Preference
+                </label>
+
+                <select
+                    id="diet"
+                    style="
+                        width:100%;
+                        padding:13px;
+                        border:1px solid #D8C8B8;
+                        background:#F8F1E7;
+                        color:#4A2C20;
+                        font-family:inherit;
+                    "
+                >
+
+                    <option value="No preference">
+                        No preference
+                    </option>
+
+                    <option value="Vegetarian">
+                        Vegetarian
+                    </option>
+
+                    <option value="Eggless">
+                        Eggless
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- NOTIFICATIONS -->
+
+            <div style="margin-bottom:30px;">
+
+                <label
+                    style="
+                        display:flex;
+                        align-items:center;
+                        gap:10px;
+                        color:#4A2C20;
+                        cursor:pointer;
+                    "
+                >
+
+                    <input
+                        type="checkbox"
+                        id="orderNotifications"
+                    >
+
+                    Receive order updates
+
+                </label>
+
+
+                <label
+                    style="
+                        display:flex;
+                        align-items:center;
+                        gap:10px;
+                        margin-top:12px;
+                        color:#4A2C20;
+                        cursor:pointer;
+                    "
+                >
+
+                    <input
+                        type="checkbox"
+                        id="offerNotifications"
+                    >
+
+                    Receive special offers and new dessert updates
+
+                </label>
+
+            </div>
+
+
+            <!-- SAVE -->
+
+            <button
+                id="savePreferences"
+                style="
+                    background:#4A2C20;
+                    color:#FFFFFF;
+                    border:none;
+                    padding:14px 28px;
+                    cursor:pointer;
+                    font-weight:600;
+                "
+            >
+                Save Preferences
+            </button>
+
+
+            <p
+                id="saveMessage"
+                style="
+                    display:none;
+                    color:#765548;
+                    margin-top:15px;
+                "
+            >
+                Preferences saved successfully.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/auth.js"></script>
+
+    <script>
+
+        document.addEventListener(
+            'DOMContentLoaded',
+            function () {
+
+                const saved =
+                    JSON.parse(
+                        localStorage.getItem(
+                            'dessertDelightPreferences'
+                        ) || '{}'
+                    );
+
+
+                /* Load saved language */
+
+                if (saved.language) {
+
+                    document.getElementById(
+                        'language'
+                    ).value =
+                        saved.language;
+
+                }
+
+
+                /* Load saved diet */
+
+                if (saved.diet) {
+
+                    document.getElementById(
+                        'diet'
+                    ).value =
+                        saved.diet;
+
+                }
+
+
+                /* Load saved desserts */
+
+                if (Array.isArray(saved.desserts)) {
+
+                    document
+                        .querySelectorAll(
+                            'input[name="dessert"]'
+                        )
+                        .forEach(function (checkbox) {
+
+                            checkbox.checked =
+                                saved.desserts.includes(
+                                    checkbox.value
+                                );
+
+                        });
+
+                }
+
+
+                /* Load notification settings */
+
+                document.getElementById(
+                    'orderNotifications'
+                ).checked =
+                    saved.orderNotifications || false;
+
+
+                document.getElementById(
+                    'offerNotifications'
+                ).checked =
+                    saved.offerNotifications || false;
+
+
+                /* Save */
+
+                document.getElementById(
+                    'savePreferences'
+                ).addEventListener(
+                    'click',
+                    function () {
+
+                        const desserts = [];
+
+                        document
+                            .querySelectorAll(
+                                'input[name="dessert"]:checked'
+                            )
+                            .forEach(function (checkbox) {
+
+                                desserts.push(
+                                    checkbox.value
+                                );
+
+                            });
+
+
+                        const preferences = {
+
+                            language:
+                                document.getElementById(
+                                    'language'
+                                ).value,
+
+                            desserts:
+                                desserts,
+
+                            diet:
+                                document.getElementById(
+                                    'diet'
+                                ).value,
+
+                            orderNotifications:
+                                document.getElementById(
+                                    'orderNotifications'
+                                ).checked,
+
+                            offerNotifications:
+                                document.getElementById(
+                                    'offerNotifications'
+                                ).checked
+
+                        };
+
+
+                        localStorage.setItem(
+                            'dessertDelightPreferences',
+                            JSON.stringify(
+                                preferences
+                            )
+                        );
+
+
+                        const message =
+                            document.getElementById(
+                                'saveMessage'
+                            );
+
+                        message.style.display =
+                            'block';
+
+
+                        setTimeout(
+                            function () {
+
+                                message.style.display =
+                                    'none';
+
+                            },
+                            2500
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

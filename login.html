@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Login | Dessert Delight
+    </title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        :root {
+
+            --cream: #F8F1E7;
+            --cocoa: #4A2C20;
+            --brown: #765548;
+            --rose: #C9828D;
+            --rose-light: #F3D9DC;
+            --white: #FFFFFF;
+            --border: #E4D7C8;
+            --text: #2F2420;
+
+        }
+
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                var(--cream);
+
+            color:
+                var(--text);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+        }
+
+
+        .page {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+        }
+
+
+        /* =====================================
+           BRAND SIDE
+        ===================================== */
+
+        .brand {
+
+            padding:
+                70px 9%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+
+        .logo {
+
+            position: absolute;
+
+            top: 35px;
+            left: 6%;
+
+            color:
+                var(--cocoa);
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                21px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                1.5px;
+
+        }
+
+
+        .eyebrow {
+
+            color:
+                var(--rose);
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2.5px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .brand h1 {
+
+            color:
+                var(--cocoa);
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(
+                    48px,
+                    5vw,
+                    74px
+                );
+
+            line-height:
+                1.02;
+
+            font-weight:
+                600;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        .brand h1 span {
+
+            color:
+                var(--rose);
+
+            font-style:
+                italic;
+
+        }
+
+
+        .brand p {
+
+            max-width:
+                520px;
+
+            color:
+                var(--brown);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================
+           LOGIN SIDE
+        ===================================== */
+
+        .login-side {
+
+            background:
+                #EFE3D3;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                40px;
+
+        }
+
+
+        .login-card {
+
+            width:
+                100%;
+
+            max-width:
+                450px;
+
+            background:
+                var(--white);
+
+            padding:
+                45px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(
+                    74,
+                    44,
+                    32,
+                    0.12
+                );
+
+        }
+
+
+        .login-card h2 {
+
+            color:
+                var(--cocoa);
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                36px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .subtitle {
+
+            color:
+                var(--brown);
+
+            font-size:
+                14px;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .field {
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .field label {
+
+            display:
+                block;
+
+            color:
+                var(--cocoa);
+
+            font-size:
+                13px;
+
+            font-weight:
+                600;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .field input {
+
+            width:
+                100%;
+
+            height:
+                51px;
+
+            padding:
+                0 15px;
+
+            border:
+                1px solid
+                var(--border);
+
+            background:
+                #FFFCF8;
+
+            outline:
+                none;
+
+            font-family:
+                inherit;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .field input:focus {
+
+            border-color:
+                var(--rose);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(
+                    201,
+                    130,
+                    141,
+                    0.12
+                );
+
+        }
+
+
+        .password-container {
+
+            position:
+                relative;
+
+        }
+
+
+        .password-container input {
+
+            padding-right:
+                65px;
+
+        }
+
+
+        .show-password {
+
+            position:
+                absolute;
+
+            right:
+                14px;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+
+            border:
+                none;
+
+            background:
+                transparent;
+
+            color:
+                var(--brown);
+
+            cursor:
+                pointer;
+
+            font-size:
+                12px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .options {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            margin:
+                5px 0 25px;
+
+        }
+
+
+        .remember {
+
+            color:
+                var(--brown);
+
+            font-size:
+                12px;
+
+        }
+
+
+        .remember input {
+
+            accent-color:
+                var(--rose);
+
+            margin-right:
+                6px;
+
+        }
+
+
+        .forgot {
+
+            color:
+                var(--rose);
+
+            text-decoration:
+                none;
+
+            font-size:
+                12px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .login-button {
+
+            width:
+                100%;
+
+            height:
+                52px;
+
+            border:
+                none;
+
+            background:
+                var(--cocoa);
+
+            color:
+                var(--white);
+
+            font-family:
+                inherit;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                1px;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.25s;
+
+        }
+
+
+        .login-button:hover {
+
+            background:
+                var(--rose);
+
+        }
+
+
+        .login-button:disabled {
+
+            opacity:
+                0.7;
+
+            cursor:
+                not-allowed;
+
+        }
+
+
+        .message {
+
+            display:
+                none;
+
+            margin-top:
+                16px;
+
+            padding:
+                12px;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.5;
+
+        }
+
+
+        .message.show {
+
+            display:
+                block;
+
+        }
+
+
+        .message.error {
+
+            background:
+                var(--rose-light);
+
+            color:
+                var(--cocoa);
+
+        }
+
+
+        .message.success {
+
+            background:
+                #E5F3E8;
+
+            color:
+                #285C35;
+
+        }
+
+
+        .divider {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            margin:
+                27px 0;
+
+            color:
+                #AA998D;
+
+            font-size:
+                11px;
+
+        }
+
+
+        .divider::before,
+        .divider::after {
+
+            content:
+                "";
+
+            height:
+                1px;
+
+            flex:
+                1;
+
+            background:
+                var(--border);
+
+        }
+
+
+        .register-link {
+
+            text-align:
+                center;
+
+            color:
+                var(--brown);
+
+            font-size:
+                13px;
+
+        }
+
+
+        .register-link a {
+
+            color:
+                var(--rose);
+
+            text-decoration:
+                none;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (
+            max-width: 800px
+        ) {
+
+            .page {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .brand {
+
+                min-height:
+                    45vh;
+
+                padding:
+                    100px 8% 50px;
+
+            }
+
+
+            .logo {
+
+                left:
+                    8%;
+
+            }
+
+
+            .login-side {
+
+                padding:
+                    35px 7%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- =========================================
+         BRAND
+    ========================================== -->
+
+    <section class="brand">
+
+        <div class="logo">
+            DESSERT DELIGHT
+        </div>
+
+
+        <div class="eyebrow">
+            MADE WITH LOVE
+        </div>
+
+
+        <h1>
+
+            Sweet moments
+            <br>
+
+            start
+            <span>here.</span>
+
+        </h1>
+
+
+        <p>
+
+            Welcome to Dessert Delight.
+            Sign in to explore our desserts,
+            manage your cart, place orders,
+            track your treats and share your
+            experience with us.
+
+        </p>
+
+    </section>
+
+
+    <!-- =========================================
+         LOGIN
+    ========================================== -->
+
+    <section class="login-side">
+
+        <div class="login-card">
+
+
+            <h2>
+                Welcome back
+            </h2>
+
+
+            <p class="subtitle">
+
+                Sign in to continue to
+                Dessert Delight.
+
+            </p>
+
+
+            <form id="loginForm">
+
+
+                <div class="field">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+
+                    <div class="password-container">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            id="showPassword"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        Remember me
+
+                    </label>
+
+
+                    <a
+                        href="#"
+                        class="forgot"
+                        id="forgotPassword"
+                    >
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+                    SIGN IN
+                </button>
+
+
+                <div
+                    class="message"
+                    id="message"
+                ></div>
+
+
+            </form>
+
+
+            <div class="divider">
+                OR
+            </div>
+
+
+            <div class="register-link">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create one
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<script>
+
+    // =================================================
+    // PASSWORD VISIBILITY
+    // =================================================
+
+    const password =
+        document.getElementById(
+            'password'
+        );
+
+
+    const showPassword =
+        document.getElementById(
+            'showPassword'
+        );
+
+
+    showPassword.addEventListener(
+        'click',
+        function () {
+
+            if (
+                password.type ===
+                'password'
+            ) {
+
+                password.type =
+                    'text';
+
+                showPassword.textContent =
+                    'Hide';
+
+            } else {
+
+                password.type =
+                    'password';
+
+                showPassword.textContent =
+                    'Show';
+
+            }
+
+        }
+    );
+
+
+    // =================================================
+    // LOGIN
+    // =================================================
+
+    const form =
+        document.getElementById(
+            'loginForm'
+        );
+
+
+    const button =
+        document.getElementById(
+            'loginButton'
+        );
+
+
+    const message =
+        document.getElementById(
+            'message'
+        );
+
+
+    function showMessage(
+        text,
+        type
+    ) {
+
+        message.textContent =
+            text;
+
+        message.className =
+            `message show ${type}`;
+
+    }
+
+
+    form.addEventListener(
+        'submit',
+        async function (event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document
+                    .getElementById(
+                        'email'
+                    )
+                    .value
+                    .trim()
+                    .toLowerCase();
+
+
+            const passwordValue =
+                password.value;
+
+
+            const remember =
+                document
+                    .getElementById(
+                        'remember'
+                    )
+                    .checked;
+
+
+            if (
+                !email ||
+                !passwordValue
+            ) {
+
+                showMessage(
+                    'Please enter your email and password.',
+                    'error'
+                );
+
+                return;
+
+            }
+
+
+            button.disabled =
+                true;
+
+            button.textContent =
+                'SIGNING IN...';
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        '/api/auth/login',
+                        {
+
+                            method:
+                                'POST',
+
+                            headers: {
+
+                                'Content-Type':
+                                    'application/json'
+
+                            },
+
+                            body:
+                                JSON.stringify({
+
+                                    email:
+                                        email,
+
+                                    password:
+                                        passwordValue
+
+                                })
+
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (
+                    !response.ok
+                ) {
+
+                    showMessage(
+                        data.message ||
+                        'Invalid email or password.',
+                        'error'
+                    );
+
+
+                    button.disabled =
+                        false;
+
+                    button.textContent =
+                        'SIGN IN';
+
+                    return;
+
+                }
+
+
+                // =====================================
+                // SAVE USER
+                // =====================================
+
+                localStorage.setItem(
+                    'dessertDelightUser',
+                    JSON.stringify(
+                        data.user
+                    )
+                );
+
+
+                if (remember) {
+
+                    localStorage.setItem(
+                        'dessertDelightToken',
+                        data.token
+                    );
+
+                } else {
+
+                    sessionStorage.setItem(
+                        'dessertDelightToken',
+                        data.token
+                    );
+
+                }
+
+
+                showMessage(
+                    `Welcome back, ${data.user.name}!`,
+                    'success'
+                );
+
+
+                button.textContent =
+                    'WELCOME BACK';
+
+
+                setTimeout(
+                    function () {
+
+                        window.location.replace(
+                            '/index.html'
+                        );
+
+                    },
+                    700
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    'Login error:',
+                    error
+                );
+
+
+                showMessage(
+                    'Unable to connect to the server. Please try again.',
+                    'error'
+                );
+
+
+                button.disabled =
+                    false;
+
+                button.textContent =
+                    'SIGN IN';
+
+            }
+
+        }
+    );
+
+
+    // =================================================
+    // FORGOT PASSWORD
+    // =================================================
+
+    document
+        .getElementById(
+            'forgotPassword'
+        )
+        .addEventListener(
+            'click',
+            function (event) {
+
+                event.preventDefault();
+
+                showMessage(
+                    'Password recovery will be added soon.',
+                    'error'
+                );
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>

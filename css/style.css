@@ -1787,3 +1787,280 @@ textarea.form-control {
     text-align: center;
   }
 }
+/* =====================================================
+   DESSERT DELIGHT ACCOUNT MENU
+   ===================================================== */
+
+#dessert-account {
+    position: relative;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+
+.dessert-account-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid rgba(74, 44, 32, 0.12);
+
+    background: #FFFFFF;
+
+    color: #4A2C20;
+
+    padding: 6px 10px 6px 6px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: all 0.2s ease;
+}
+
+
+.dessert-account-button:hover {
+    border-color: #C9828D;
+
+    box-shadow:
+        0 4px 15px
+        rgba(74, 44, 32, 0.08);
+}
+
+
+.dessert-avatar,
+.dessert-large-avatar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #F3D9DC;
+
+    color: #4A2C20;
+
+    font-weight: 700;
+}
+
+
+.dessert-avatar {
+    width: 31px;
+    height: 31px;
+
+    font-size: 11px;
+}
+
+
+.dessert-large-avatar {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    font-size: 13px;
+}
+
+
+.dessert-user-name {
+    max-width: 120px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.dessert-arrow {
+    font-size: 12px;
+
+    color: #765548;
+}
+
+
+/* ACCOUNT DROPDOWN */
+
+.dessert-account-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    width: 270px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E4D7C8;
+
+    box-shadow:
+        0 18px 50px
+        rgba(74, 44, 32, 0.14);
+
+    padding: 8px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-6px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 9999;
+}
+
+
+.dessert-account-menu.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ACCOUNT HEADER */
+
+.dessert-account-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 12px;
+}
+
+
+.dessert-account-header strong {
+    display: block;
+
+    color: #4A2C20;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 15px;
+
+    margin-bottom: 3px;
+}
+
+
+.dessert-account-header small {
+    display: block;
+
+    color: #765548;
+
+    font-size: 11px;
+
+    max-width: 170px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* DIVIDER */
+
+.dessert-menu-divider {
+    height: 1px;
+
+    background: #E4D7C8;
+
+    margin: 5px 0;
+}
+
+
+/* MENU ITEMS */
+
+.dessert-menu-item {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #4A2C20;
+
+    text-decoration: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dessert-menu-item:hover {
+    background: #F8F1E7;
+
+    color: #C9828D;
+}
+
+
+.dessert-menu-item span:first-child {
+    width: 20px;
+
+    text-align: center;
+}
+
+
+.dessert-logout {
+    color: #C9828D;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .dessert-user-name {
+        display: none;
+    }
+
+
+    .dessert-account-menu {
+        right: -5px;
+
+        width: 250px;
+    }
+
+}
